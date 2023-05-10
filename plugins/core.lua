@@ -20,6 +20,21 @@ return {
       return opts
     end,
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      window = {
+        width = 50
+      }
+    }
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      size = 180,
+      direction = "vertical"
+    }
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
