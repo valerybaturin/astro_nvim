@@ -25,5 +25,12 @@ return {
   },
   {
     "lunarvim/darkplus.nvim",
+  },
+  {
+    "theHamsta/nvim-dap-virtual-text",
+    config = function ()
+      require("nvim-dap-virtual-text").setup()
+    end,
+    event = { "BufEnter" }
   }
 }
