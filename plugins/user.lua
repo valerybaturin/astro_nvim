@@ -17,7 +17,9 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     config = function()
-      require("go").setup()
+      require("go").setup({
+        diagnostic = false,
+      })
     end,
     event = { "CmdlineEnter" },
     ft = { "go", 'gomod' },
@@ -29,8 +31,13 @@ return {
   {
     "theHamsta/nvim-dap-virtual-text",
     config = function ()
-      require("nvim-dap-virtual-text").setup()
+      require("nvim-dap-virtual-text").setup({})
     end,
     event = { "BufEnter" }
+  },
+  {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+  	event = "BufEnter",
+	  config = true
   }
 }
